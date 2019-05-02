@@ -1,0 +1,91 @@
+
+<div class="row">
+  <div class="bgdark col-12">
+    <div class="col-md-12">
+          <h4 class="text-center text-white">My Images</h4>
+    
+        </div>
+        <div class="row">
+          <div class="col-md-12 ">
+            <button class="btn btn-link text-white" [routerLink]="['/main/delivery']" routerLinkActive="router-link-active" skipLocationChange>BACK</button>
+            <button class="btn btn-link float-right text-white ">SELECT</button>
+        
+          </div>
+        </div>
+        </div>
+        </div>
+      
+
+<div class="container">
+    <h1 class="text-dark my-4"><strong><a href="" [routerLink]="['./delivery']" routerLinkActive="active">Delivery</a> &nbsp; &nbsp;<i class="fa fa-angle-right"></i> &nbsp; &nbsp; Photography &nbsp;<i class="fa fa-caret-down" ></i></strong></h1>
+  <div class="row p-md-3 p-lg-3 mx-lg-auto mx-md-auto my-sm-3">
+   
+  <div class=" col-6 col-lg-4" *ngFor="let propy of (image|async)?.Photography; let i = index ">
+    
+   <div class="card  mx-2 my-sm-2 my-3 cardsize"  data-toggle="modal" data-target="#demo"(click)="passIndexValue(i,propy)" >
+   
+     <img class="card-img-top imgsize" img [src]="propy"  alt="Card image" >
+    
+    
+      <h5 class="text-center card-title text-danger"  ><strong>Sample.png</strong></h5>
+        </div>
+  </div>
+  
+  
+   </div>
+   
+ </div>
+ <div class="modal fade " id="demo" *ngFor="let propy of (image|async)?.Photography; let i = index ">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+
+    
+     <div class="modal-header" >
+
+      <div class="container ">
+        <button type="button" id="CloseButton" class="close text-white" data-dismiss="modal">&times;</button>
+        <a [href]="propy" download><i class="fa fa-download float-right mx-2 my-1" style="font-size: 20px;color:#fff;"></i></a> 
+    </div>
+     </div>
+
+<div class="modal-body"  >
+
+  <div class="container" >
+<div class="row " >
+  <div class="col-2 " >
+    <a  id="btnprev" class="prevContorl carouselcontrol" (click)="minusSlides(i-1, propy)">
+        <i class="fa fa-angle-left faup" style="font-size:48px;color:#fff"></i>
+   </a>
+
+</div>
+    <div class=" col-8">
+      <div class="sliderImages text-center">
+          <img id="modalimg" class="img-fluid modalsimg" src="">
+     <h4 id="modalheading" class="text-center text-light"></h4>
+      <p id="modalpara" class="text-center text-light"></p>
+                </div>
+
+    </div>
+    <div class="col-2 text-right ">
+
+      <a  id="btnnxt" class="nextContorl carouselcontrol" (click)="plusSlides(i+1, propy)">
+          <i class="fa fa-angle-right faup" style="font-size:48px;color:#fff"></i>
+       </a>
+     </div>
+ </div>
+  </div>
+
+ </div>
+</div>
+</div>
+</div> 
+<!-- <div class="d-flex flex-wrap">
+  <div class="col-6 col-sm-6 col-md-4 col-lg-4 thumb" *ngFor="let propy of (image|async)?.Photography; let i = index ">
+     <figure>
+       <img img [src]="propy" alt="Trulli" class="img-fluid zoom">
+       <figcaption class="text-center mt-3"><strong>{{(image|async)?.name}}</strong></figcaption>
+     </figure>
+  </div>
+  </div>
+  <button class="btn btn-primary" (click)="asd()">Click</button> -->

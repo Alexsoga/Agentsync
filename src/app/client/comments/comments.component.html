@@ -1,0 +1,36 @@
+
+<form #commentForm="ngForm" (ngSubmit)="updateComments(commentForm)">
+  <div class="row">
+    <div class="bgdark col-12">
+      <div class="col-md-12">
+        <h3 class="text-center text-white">New Order > First Unit</h3>
+        <img src="/assets/image/icons/delivery1.png" class="img-fluid float-right delivery" >
+        <h4 class="text-center">Notes </h4>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-4 text-left">
+          <button type="button" class="btn3 text-white" [routerLink]="['/main/order/visitingtime']" routerLinkActive="router-link-active" skipLocationChange >BACK</button>
+        </div>
+        <div class="col-md-4 col-4 text-center">
+          <h5 class="total">Subtotal:<span class="mx-1 sp">${{orderprice}}</span></h5>
+        </div>
+        <div class="col-md-4 col-4 text-right">
+          <button type="submit" class="btn3 text-white">NEXT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-md-2 col-md-8 col-xs-12">
+      <h3 class="text-center mt-3">Please add any additional notes on this order</h3>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="offset-md-2 col-md-8 col-11 offset-1 mx-auto">
+      <textarea class="form-control form-rounded" rows="13" name="comment" #comment="ngModel" ngModel placeholder="Please Enter Your Comments"
+        required></textarea>
+
+    </div>
+  </div>
+</form>
+

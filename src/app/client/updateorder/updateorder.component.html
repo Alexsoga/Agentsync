@@ -1,0 +1,49 @@
+<div class="row mb-4">
+    <div class="bgdark col-12">
+      <div class="col-md-12">
+            <h3 class="text-center text-white">New Order > First Unit</h3>
+            <img src="/assets/image/icons/delivery1.png" class="img-fluid float-right delivery" >
+            <div class="text-right orderquery offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12">
+                <div *ngIf="invoicelist | async as aviso">
+                    <ul style="display:none">
+                      <li *ngFor="let aviso of aviso; let i = index">
+                        {{aviso}}
+                      </li>
+                    </ul>
+                    
+                       
+                        <span matBadge={{aviso.length}} matBadgeColor="warn"></span>
+                      
+                
+                  </div>
+            </div>
+            <h4 class="text-center sp">Order Updated</h4>
+      </div>
+          <div class="row">
+              <div class="col-md-4 col-4 text-left">
+                  <button type="button" class="btn btn-link text-white" [routerLink]="['/main/order/comments']" routerLinkActive="router-link-active" skipLocationChange>BACK</button>
+              </div>
+              <div class="col-md-4 col-4 text-center">
+                  <h5 class="total">Subtotal:<span class="mx-1 sp">${{orderprice}}</span></h5>
+                </div>
+              <div class="col-md-4 col-4 text-right">
+               <br>
+              </div>
+         </div>
+  </div>
+ </div>
+<div class="row text-center mb-3">
+    <div class="col-md-12 col-xs-12 my-5">
+      <h3 class="orderhead">Your Order has been updated</h3>
+      <p>To add another property or unit to your order,please choose New Order below.Otherwise submit this order.</p>
+    </div>
+</div>
+    <div class="row">
+      <div class="offset-md-3 col-md-6 offset-1 col-10 mt-5 my-3">
+          
+                <button type="button" class="btn btn2 btn-md btn-block" [routerLink]="['/main/order/placeorder']" routerLinkActive="router-link-active" (click)="reload()" >ADD ANOTHER UNIT</button>
+                <button type="button" class="btn btn3 btn-md btn-block" (click)="submit()">SUBMIT ORDER</button>
+          
+         
+            </div>
+    </div>

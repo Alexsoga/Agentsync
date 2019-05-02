@@ -1,0 +1,76 @@
+<app-adminheader></app-adminheader>
+  
+  <br>
+ 
+ <div class="row mt-4 ">
+     <div class="d-none d-md-block d-lg-block d-xl-block col-md-3 sidenav">
+         <app-adminsidenav></app-adminsidenav>
+     </div>
+     <div class="col-md-9 col-sm-12 my-3 bg-light">
+         <div class="row ">
+           <div class="col-md-12 p-0 my-2 bg-white">
+               <h3 class="text-dark">Orders</h3>
+           </div>
+       
+         </div>
+         <div class="row">
+             
+
+
+
+            <div class="col-12">
+               <!-- Nav pills  Horizontal-->
+               <!-- for desktop -->
+                   <div class="d-block">
+                       <ul class="nav nav-pills nav-fill" role="tablist" id="horizontaltab">
+                            <li class="nav-item ">
+                                    <a class="nav-link active  " data-toggle="pill" href="#NEW">NEW</a>
+                                </li>
+                                <!-- <li class="nav-item">
+                                        <a class="nav-link " data-toggle="pill" href="#SCHEDULED">SCHEDULED</a>
+                                      </li> -->
+                           <li class="nav-item" >
+                             <a class="nav-link  " data-toggle="pill" href="#TODAY">TODAY</a>
+                           </li>
+                          
+                          
+                         
+                         <li class="nav-item">
+                             <a class="nav-link " data-toggle="pill" href="#PENDING">DELIVERY PENDING</a>
+                         </li>
+                         <!-- <li class="nav-item">
+                            <a class="nav-link " data-toggle="pill" href="#INVOICE">UPLOAD INVOICE</a>
+                          </li> -->
+        
+                           <li class="nav-item">
+                             <a class="nav-link " data-toggle="pill" href="#COMPLETE">COMPLETED</a>
+                           </li>
+                          
+                         </ul>
+                   </div>
+                   <div class="tab-content priceres" id="horizontalcontent">
+                        <div id="NEW" class="container tab-pane active"><br>
+                            <app-adminnew></app-adminnew>
+                        </div>
+                        <div id="SCHEDULED" class="container tab-pane "><br>
+                            <app-adminscheduled></app-adminscheduled>
+                        </div>
+                        <div id="TODAY" class="container tab-pane "><br>
+                            <app-admintable></app-admintable>
+                        </div>
+                        <div id="PENDING" class="container tab-pane "><br>
+                            <app-adminpending></app-adminpending>
+                        </div>
+                        <div id="COMPLETE" class="container tab-pane "><br>
+                            <app-admincomplete></app-admincomplete>
+                        </div>
+                        <!-- <div id="INVOICE" class="container tab-pane "><br>
+                            <app-admininvoice></app-admininvoice>
+                        </div> -->
+                        
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    

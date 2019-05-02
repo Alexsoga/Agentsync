@@ -1,0 +1,37 @@
+
+<div class="row">
+  <div class="bgdark col-12">
+    <div class="col-md-12">
+          <h3 class="text-center text-white">New Order > First Unit</h3>
+          <img src="/assets/image/icons/delivery1.png" class="img-fluid float-right delivery" >
+          <h4 class="text-center">Products </h4>
+    </div>
+  </div>
+</div>
+  <form class="row" #unitsform="ngForm"  (ngSubmit)="unitssubmit()">
+    <div class="bgdark col-12">
+      <div class="col-md-12 ">
+        <button class="btn btn-link text-white" (click)="gotoplaceorder()">BACK</button>
+        <button type="submit"  class="btn btn-link float-right text-white ">NEXT</button>
+    
+      </div>
+    
+    </div>
+    <div class="offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 text-center">
+     
+        <h3 class="text-center my-5">How many units are we serving at this property</h3>
+         <a (click)="inc()"><i class="fa fa-sort-up up"></i></a> 
+          <h2 class="text-center">{{unit}}</h2>
+          <a (click)="dec()"><i class="fa fa-sort-down down text-center"></i></a>
+    </div>
+    <div class="offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12">
+    
+      
+    
+    
+    </div>
+  </form>
+      
+ 
+
+

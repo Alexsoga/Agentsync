@@ -1,0 +1,64 @@
+
+ <div class="row" >
+  <div class="bgdark col-12">
+    <div class=" col-md-12">
+          <h3 class="text-center text-white">New Order > {{totalunits}} First Unit</h3>
+          <img src="/assets/image/icons/delivery1.png" class="img-fluid float-right delivery" >
+          <h4 class="text-center sp">{{propertytype}} Address </h4>
+    </div>
+  </div> 
+ </div>
+ <form class="row" [formGroup]="addressformgroup" (ngSubmit)="Onaddresssubmit()">
+    <div class="bgdark col-12">
+      <div class="col-md-12 "> 
+        <button class="btn btn-link text-white" (click)="pl()">BACK</button>
+        <button type="submit" [disabled]="!addressformgroup.valid"  class="btn btn-link float-right text-white ">NEXT</button>
+    
+      </div>
+      
+    </div>
+    <div class="mt-5 mb-5 offset-1 col-11 mx-auto">
+      <input type="text" placeholder="Street Address" class="numinput form-control p-4 text-center my-5"  formControlName="street" name="street" id="name" required >
+    <!-- <p>{{addressformgroup.get('street').value}}</p> -->
+       <!-- <div *ngIf="addressformgroup.controls['street'].haserror('required')">
+         Street is required
+       </div> -->
+       <!-- <div *ngIf="addressformgroup.get('street').haserror('required')">
+         ooos
+       </div> -->
+    <div *ngIf="af.street.invalid &&(af.street.dirty || af.street.touched)"   >
+      <div *ngIf="af.street.errors.required">
+        Street Address Required
+      </div>
+    </div>
+   
+      <input type="text" placeholder="City,State" class="form-control p-4 numinput text-center my-5" formControlName="city" name="city" id="city" required>
+        <div *ngIf="af.city.invalid &&(af.city.dirty || af.city.touched)">
+          <div *ngIf="af.city.errors.required">
+            city, state Required
+          </div>
+        </div>
+      <input type="text" placeholder="Zip Code" minlength="5" maxlength="5"  class="form-control p-4 numinput text-center my-5" formControlName="zipCode" name="zipcode" id="zipcode" required>
+        <div *ngIf="af.zipCode.invalid &&(af.zipCode.dirty || af.zipCode.touched)">
+          <div *ngIf="af.zipCode.errors.required">
+            zipcode Required
+          </div>
+          <div *ngIf="af.zipCode.errors.pattern">
+                Please enter proper zipcode
+          </div>
+          <div *ngIf="af.zipCode.errors.minlength">
+                      Please enter 5 digit zipcode of your area
+          </div>
+        </div>
+      
+       <div *ngIf="isAppartment">  
+        <input type="text" placeholder="Unit Number" class="form-control p-4 numinput text-center my-5" formControlName="unit" 
+          name="unit" id="unit" required>
+      </div> 
+      <!-- <p>ssss {{addressformgroup.value | json}}</p> -->
+    </div>
+   
+   <!-- <p>status {{addressformgroup.status}}</p>  -->
+    
+   
+ 

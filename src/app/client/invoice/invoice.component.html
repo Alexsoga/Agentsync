@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="bg-dark col-12">
+    <div class="col-md-12">
+          <h3 class="text-center text-white">My Invoices</h3>
+    </div>
+        <div class="row my-2">
+            <div class="col-md-6 col-6 text-left">
+                <button type="btn btn-link text-white" class="btn3 text-white" [routerLink]="['/main/myaccount/main']" routerLinkActive="router-link-active" skipLocationChange>BACK</button>
+            </div>
+            <div class="col-md-6 col-6 text-right">
+                <button type="button" class="btn3 text-white text-right">SELECT</button>
+            </div>
+       </div>
+</div>
+</div>
+<div class="col-md-8 mx-auto">
+        <div class="mt-5 d-flex flex-wrap justify-content-center">
+          <div class="p-2 mx-2 text-center mx-auto" *ngFor="let order of orders | async">
+                <a (click)="query(order.orderid,order.orderby,order.address.street,order.address.city,order.address.zip )"><i class="fa fa-file-pdf-o"
+                    style="font-size:48px;color:#000000"></i><br>
+                    {{ order.visitingdate.toDate() |date:'MMM d'}}</a>
+
+          </div>
+        </div>
+    
+       
+   </div>
+   <table id="content" style="display: none;" >
+    <thead>
+      <tr>
+        <th>Products</th>
+        <th>Price</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prop of (property|async)?.orders; let i = index ">
+        <td>{{(property |async)?.orders[i]}}</td>
+        <td>{{(property |async)?.ordersprice[i]}}</td>
+      </tr>
+      <tr *ngIf="(property |async)?.Photographyaddons">
+        <td>{{(property |async)?.Photographyaddons}}</td>
+        <td>{{(property |async)?.Photographyaddonsprice}}</td>
+      </tr>
+      <tr *ngIf="(property |async)?.Videoaddons" >
+        <td>{{(property |async)?.Videoaddons}}</td>
+        <td>{{(property |async)?.VideoaddonsPrice}}</td>
+      </tr>
+      <tr  >
+        <td>Total</td>
+        <td>${{(property |async)?.orderprice}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+<!-- <div class="row my-5">
+        <div class="offset-md-3 col-md-6 col-xs-12 my-5">
+        <button type="button" class="btn btn-lg btn-block my-5" (click)="order()">Download</button>
+        </div>
+</div>        -->

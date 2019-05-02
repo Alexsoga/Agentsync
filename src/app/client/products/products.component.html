@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<div class="row mb-4">
+  <div class="bgdark col-12">
+    <div class="col-md-12">
+      <h3 class="text-center text-white">New Order > First Unit</h3>
+      <img src="/assets/image/icons/delivery1.png" class="img-fluid float-right delivery" >
+      <h4 class="text-center">Products </h4>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-4 text-left">
+        <button type="button" class="btn btn-link text-white" [routerLink]="['/main/order/squarefeet']" routerLinkActive="router-link-active" skipLocationChange>BACK</button>
+      </div>
+      <div class="col-md-4 col-4 text-center">
+        <h5 class="total">Subtotal:<span class="mx-1 sp">${{orderprice}}</span></h5>
+      </div>
+      <div class="col-md-4 col-4 text-right">
+        <button type="button" class="btn btn-link text-white" (click)="updateorder()">NEXT</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row text-center">
+  <div class="offset-md-2 col-md-8 col-xs-12">
+    <h3>What products are needed at this unit?</h3>
+    <p>{{message}} </p>
+  </div>
+</div>
+<div class="row ">
+  <div class="offset-1 col-10 mx-auto ">
+    <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="pushpgy($event, 'Photography')">Photography</button>
+    <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block " (click)="pusht360($event, 'Tour 360')">360 Tour</button>
+    <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block " (click)="pushvt($event, 'Video Tour')"> Video Tour</button>
+    <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="pushspw($event, 'Single Page Website')">Single Property Website</button>
+    <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="pushb425($event, 'Brochure 4 Page 25 Copies')">Brochure(4 Page)25</button>
+    <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="pushb450($event, 'Brochure 4 Page 50 Copies')">Brochure(4 Page)50</button>
+    <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="pushb825($event, 'Brochure 8 Page 25 Copies')">Brochure(8 Page)25</button>
+    <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="pushb850($event, 'Brochure 8 Page 50 Copies')">Brochure(8 Page)50</button>
+    <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="pushfpbw($event, 'Floor Plans (B&W)')">Floor Plans(B&W)</button>
+    <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="pushfpc($event, 'Floor Plans (Color)')">Floor Plans(Color) </button>
+    <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="pushfpcf($event, 'Floor Plans(Color+Furniture)')">Floor Plans(Color+Furniture)</button>
+    <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="pushd50($event, 'Double-Sided Flyer 50')">Double-Sided Flyer 50</button>
+    <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block mb-5" (click)="pushd100($event, 'Double-Sided Flyer 100')">Double-Sided Flyer 100</button>
+  </div>
+  
+</div>
+
+
+
+

@@ -1,0 +1,24 @@
+.btn1
+{
+  color: #fff;
+  background-color:#F07C49;
+  border-radius:30vw !important;
+  font-size: 1.25rem;
+  }
+.btn1:hover{
+color: #000;
+}
+.background{
+    background-image: url('/assets/image/background/desktop/desktop1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+  @media only screen and (max-width: 800px) {
+    .background{
+      background-image: url('/assets/image/background/mobile/mobileback.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 160vh;
+    }
+    }

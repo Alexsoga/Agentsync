@@ -1,0 +1,68 @@
+.icon{
+    width: 14vw;
+    height: 25vh;
+
+}
+/* .checksize{
+    height: 4vh;
+    width: 4vw;
+} */
+.sample{
+    width:16.4vw;
+    font-size:16px;
+    
+    
+    }
+.btn1
+  {
+    color: #fff;
+    background-color:#F07C49;
+    border-radius:30vw !important;
+    font-size: 1.25rem;
+    }
+
+.imagesize{
+    width:20vw;
+}
+
+@media screen and (max-width: 420px) and (min-width: 320px){
+    .imagesize{
+        width:43vw;
+    }
+   
+}
+@media screen and (max-width: 780px) and (min-width: 440px){
+    .imagesize{
+        width:42vw;
+    }
+   
+}
+
+@media screen and (max-width: 710px) and (min-width: 310px){
+   
+    .sample{
+        width:40vw;
+        font-size:12px
+    }
+
+
+}
+@media screen and (max-width: 1026px) and (min-width: 1000px){
+   
+    .sample{
+        width:18.4vw;
+        font-size:15px
+    }
+
+
+}
+
+@media screen and (max-width: 920px) and (min-width: 750px){
+   
+    .sample{
+        width:40vw;
+        font-size:20px
+    }
+
+
+}

@@ -1,0 +1,232 @@
+<div class="row " style="margin-bottom:45px; " >
+  <div class=" offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 text-center mt-5">
+    <div  (click)="onSwipe($event)"   >
+       
+        <i class="fa fa-angle-up mx-auto"></i>
+        <h1 class="swipe"> View Price</h1>
+    </div>
+  </div>
+</div>
+
+
+<div [@slideInOut]="priceStatus" style="position:absolute;padding-left: 0;padding-right: 0;" [ngStyle]="{'display':priceStatus ==='out'?'none':'block'}"class="col-sm-12 d-md-none d-lg-none d-xl-none d-sm-block" id="headerback">
+    <div  style="margin-bottom:45px" >
+        <div class="col-sm-12 offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 text-center">
+          <div  (click)="onSwipe($event)"   >
+             
+              <i class="fa fa-angle-down mx-auto"></i>
+              <h1 class="swipe"> Hide Price</h1>
+             
+          </div>
+        </div>
+      </div>
+  
+      <div class="  col-sm-12 text-center" id="view">
+        <span class="rounded-circle mb-4 bg-white"><img src="../../../assets/icons/icon-72x72.png" class="p-2"></span>
+      </div>
+      <div class="w-lg-50 mb-2 bg-white border border-grey">
+        <h3 class="text-center p-3 my-1 ">PRICE MENU</h3>
+      </div>
+<div class=" col-12 ">
+<!-- Nav pills  Horizontal-->
+<!-- for desktop -->
+    <div class="d-md-block d-none col-sm-12">
+        <ul class="nav nav-pills nav-fill" role="tablist" id="horizontaltab">
+            <li class="nav-item" >
+              <a class="nav-link active " data-toggle="pill" href="#PHOTOGRAPHY">PHOTOGRAPHY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " data-toggle="pill" href="#FLOOR">FLOOR PLANS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " data-toggle="pill" href="#VIDEO">VIDEO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " data-toggle="pill" href="#VIRTUAL">360 VIRTUAL TOURS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " data-toggle="pill" href="#PROPERTY">SINGLE PROPERTY WEBSITES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " data-toggle="pill" href="#BROCHURES">BROCHURES</a>
+            </li>
+          </ul>
+    </div>
+
+<!-- 
+for mobile -->
+<div class="d-block d-sm-block d-md-none d-lg-none d-xl-none text-center offset-1 col-10">
+    <ul class="nav nav-pills  flex-column" role="tablist" id="horizontaltab">
+        <li class="nav-item p-2" >
+          <a class="nav-link active photo " data-toggle="pill" href="#PHOTOGRAPHY">PHOTOGRAPHY</a>
+        </li>
+        <li class="nav-item p-2">
+          <a class="nav-link " data-toggle="pill" href="#FLOOR">FLOOR PLANS</a>
+        </li>
+        <li class="nav-item p-2">
+          <a class="nav-link " data-toggle="pill" href="#VIDEO">VIDEO</a>
+        </li>
+        <li class="nav-item p-2">
+          <a class="nav-link " data-toggle="pill" href="#VIRTUAL">360 VIRTUAL TOURS</a>
+        </li>
+        <li class="nav-item p-2">
+          <a class="nav-link " data-toggle="pill" href="#PROPERTY">SINGLE PROPERTY WEBSITES</a>
+        </li>
+        <li class="nav-item p-2">
+          <a class="nav-link " data-toggle="pill" href="#BROCHURES">BROCHURES</a>
+        </li>
+    </ul>
+
+</div>
+
+
+
+<!-- Tab panes -->
+<div class="tab-content priceres" id="horizontalcontent">
+
+<div id="PHOTOGRAPHY" class="container tab-pane active">
+<h3 class="text-center">PHOTOGRAPHY</h3>
+
+<ul class="list-group text-center">
+<li class="list-group-item">Up To 750SF:$145</li>
+<li class="list-group-item">751-1500SF: $175</li>
+<li class="list-group-item">1501-2250SF:$205</li>
+<li class="list-group-item">2251-3000 SF:$235</li>
+<li class="list-group-item">3001-3750 SF:$275</li>
+<li class="list-group-item">3751-4500 SF:$305</li>
+<li class="list-group-item">4501-5250 SF:$335</li>
+</ul>
+<div class="row">
+    <div class="col-4 offset-2">
+        <p>COMMUNITY SHOTS: +$50</p>
+        <p>TWILIGHT SHOTS: +$65</p>
+        <p>RUSH FEE: +$75</p>
+    </div>
+   <div class="col-4 offset-1">
+      <p class="photop">MIN 30 PHOTOS</p>
+      <p class="photop">2 SIZE: MLS & PRINT</p>
+      <p class="photop">NEXT DAY DELIVERY</p>
+   </div>
+</div>
+
+
+</div>
+
+<div id="FLOOR" class="container tab-pane fade"><br>
+  <div class="tabbable boxed parentTabs p-4">
+      <ul class="nav nav-tabs floor-tab justify-content-center">
+          <li class="active"><a href="#BLACK" class="nav-link text-dark" data-toggle="pill">BLACK</a>
+          </li>
+          <li><a href="#COLOR" class="nav-link text-dark" data-toggle="pill">COLOR</a>
+          </li>
+          <li><a href="#COLORFURN" class="nav-link text-dark" data-toggle="pill">COLORFOUR</a>
+          </li>
+      </ul>
+      <div class="tab-content">
+          <div class="tab-pane fade active in show" id="BLACK">
+            <ul class="list-group text-center">
+                <li class="list-group-item"><h5 class="text-center">BLACK</h5></li> 
+                 <li class="list-group-item">Up To 750SF:$125</li>
+                 <li class="list-group-item">751-1500SF: $155</li>
+                 <li class="list-group-item">1501-2250SF:$185</li>
+                 <li class="list-group-item">2251-3000 SF:$215</li>
+                 <li class="list-group-item">3001-3750 SF:$245</li>
+                 <li class="list-group-item">3751-4500 SF:$275</li>
+                 <li class="list-group-item">4501-5250 SF:$305</li>
+              </ul>
+          </div>
+          <div class="tab-pane fade" id="COLOR">
+            <ul class="list-group text-center">
+                <li class="list-group-item"><h5 class="text-center">COLOR</h5></li>
+            <li class="list-group-item">Up To 750 SF:$165</li>
+             <li class="list-group-item">751-1500 SF: $195</li>
+             <li class="list-group-item">1501-2250 SF:$215</li>
+             <li class="list-group-item">2251-3000 SF:$245</li>
+             <li class="list-group-item">3001-3750 SF:$275</li>
+             <li class="list-group-item">3751-4500 SF:$305</li>
+             <li class="list-group-item">4501-5250 SF:$335</li>
+         </ul>
+          </div>
+          <div class="tab-pane fade" id="COLORFURN">
+            <ul class="list-group text-center">
+                <li class="list-group-item"><h5 class="text-center">COLOR & FURN</h5></li>
+                <li class="list-group-item">Up To 750SF:$195 </li>               
+                <li class="list-group-item">751-1500SF: $215</li>
+                <li class="list-group-item">1501-2250SF:$245</li>
+                <li class="list-group-item">2251-3000 SF:$275</li>
+                <li class="list-group-item">3001-3750 SF:$305</li>
+                <li class="list-group-item">3751-4500 SF:$335</li>
+                <li class="list-group-item">4501-5250 SF:$375</li> 
+               </ul>
+          </div>
+      </div>
+  </div>
+  </div>
+<div id="VIDEO" class="container tab-pane fade mx-auto"><br>
+<h3 class="text-center">VIDEO</h3>
+<ul class="list-group text-center">
+<li class="list-group-item">UP TO 1500SF:$255</li>
+<li class="list-group-item">1500-3500 SF:$335</li>
+<li class="list-group-item">3501-5500 SF:$415</li>
+
+</ul>
+
+    <p class="text-center">COMMUNITY SHOTS: +$50</p>
+    <p class="text-center">TWILIGHT SHOTS:+$65</p>
+    <p class="text-center">RUSH FEE:+$75</p>
+
+
+
+<h6 class="text-center">CUSTOM QUOTES AVAILABLE OVER 5500 SF</h6>
+
+</div>
+<div id="VIRTUAL" class="container tab-pane fade"><br>
+<h3 class="text-center">360 VIRTUAL TOURS</h3>
+<ul class="list-group text-center">
+<li class="list-group-item">Up To 750SF:$125</li>  
+<li class="list-group-item">751-1500SF: $155</li> 	
+<li class="list-group-item">1501-2250SF:$185</li>
+<li class="list-group-item">2251-3000 SF:$215</li>        
+<li class="list-group-item">3001-3750 SF:$245</li>        
+<li class="list-group-item">3751-4500 SF:$275</li>        
+<li class="list-group-item">4501-5250 SF:$305</li>               
+<li class="list-group-item">
+<h6 class="text-center">DELIVERED VIA LINK NEXT DAY AND/OR ADDED TO WEBSITE(IF APPLICABLE)</h6>
+</li>
+</ul>
+</div>
+<div id="PROPERTY" class="container tab-pane fade"><br>
+<h3 class="text-center">SINGLE PROPERTY WEBSITES</h3>
+<ul class="list-group text-center">
+<li class="list-group-item">INITIAL TEMPLATE SET UP/FIRST WEBSITE :$85</li>
+<li class="list-group-item">ALL FOLLOWING WEBSITES:$75</li>
+<li class="list-group-item"><h6>PLEASE ALLOW 2 DAYS FOR THE</h6></li>
+<li class="list-group-item"><h6> DOMAIN TO REGISTER</h6></li>
+<li class="list-group-item">
+<h6 class="text-center">ALL WEBSITES VALID FOR 1 YEAR</h6>
+</li>
+</ul>
+</div>
+<div id="BROCHURES" class="container tab-pane fade"><br>
+<h3 class="text-center">BROCHURES</h3>
+<ul class="list-group text-center">
+<li class="list-group-item">8.5*11 25 4 PAGERS:$125</li>
+<li class="list-group-item">8.5*11 50 4 PAGERS:$155</li>
+<li class="list-group-item">8.5*11 25 8 PAGERS:$215</li>  
+<li class="list-group-item">8.5*11 50 8 PAGERS:$245</li>
+<li class="list-group-item"><h6>DOUBLE SIDE FLYERS </h6></li>
+<li class="list-group-item">8.5*11 50 :$75</li>     
+<li class="list-group-item">8.5*11 100 :$95</li>         
+<li class="list-group-item">
+<h6 class="text-center">PICK UP OR LOCAL DELIVERY AVAILABLE.PLEASE ALLOW 2 BUSINESS DAYS FOR PRINTING MATERIALS</h6>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- End Nav pills Horizontal-->
+
+<!--Nav pills Vertical-->
+
+
+</div>

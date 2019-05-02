@@ -1,0 +1,64 @@
+.numinput{
+    
+  border: 2px solid #434343;
+ }
+ .icon{
+    font-size: 1.25rem;
+ }
+.btn1:hover{
+  color: #000;
+} 
+ h3
+{ 
+
+  font-size: 1.4rem;
+ 
+}
+p{
+  /* font-size: 1.50rem; */
+  color: #434343;
+}
+.fa{
+    font-size: 2rem;
+}
+.background{
+  background-image: url('/assets/image/background/desktop/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+::-webkit-input-placeholder {
+   color:#434343;
+   font-weight:600;
+}
+@media only screen and (max-width: 800px) {
+.background{
+  background-image: url('/assets/image/background/mobile/forg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+}
+
+.size{
+  position: absolute;
+  width: 3.5vw;
+  padding-top: 1.3vw;
+  margin-left: 4vw;
+}
+
+@media screen and (max-width: 420px) and (min-width: 320px){
+  .size{
+      position: absolute;
+      width: 10.5vw;
+padding-top: 5.3vw;
+margin-left: 4vw;
+  }
+  h3 {
+      margin-top: 20vw!important;
+      margin-left: 4vw;
+  }
+  .top{
+    margin-top: -97vw;
+  }
+}

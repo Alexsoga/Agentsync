@@ -1,0 +1,293 @@
+<h3 class="text-center">NEW ORDERS</h3>
+<div class="example-container mat-elevation-z8">
+    <div class="example-header">
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+    </div>
+  
+    <table mat-table [dataSource]="dataSource" matSort>
+  
+      <!-- No Column -->
+      <!-- Building Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Customer Name </th>
+        <td mat-cell *matCellDef="let orders" data-toggle="modal" data-target="#Customer" (click)="cusdetail(orders.orderid)"><a>{{orders.orderby}}</a> </td>
+      </ng-container>
+      
+    
+          <!-- Address Column -->
+          <ng-container matColumnDef="address">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Order Date </th>
+            <td mat-cell *matCellDef="let orders">{{orders.ordereddate.toDate()| date :'short'}} </td>
+          </ng-container>
+      
+          <!-- Date/Time Column -->
+          <ng-container matColumnDef="date/time">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Scheduled Date </th>
+            <td mat-cell *matCellDef="let orders" data-toggle="modal" data-target="#sdate" (click)="sdate(orders.visitingdate.toDate())" >{{orders.visitingdate.toDate()| date :'short'}}  </td>
+          </ng-container>
+          <!-- OrderValue-->
+          
+          <ng-container  matColumnDef="ordervalue" >
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Cost </th>
+            <td mat-cell *matCellDef="let order" >${{order.orderprice}}  </td>
+          </ng-container>
+          <ng-container matColumnDef="no">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> OrderID </th>
+            <td mat-cell *matCellDef="let orders" data-toggle="modal" data-target="#ordersdetail" (click)="cusdetail(orders.orderid)">{{orders.orderid}} </td>
+          </ng-container>
+          <ng-container matColumnDef="invoice">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Invoice </th>
+            <td mat-cell *matCellDef="let orders"><a (click)="query(orders.orderid,orders.orderby,orders.address.street,orders.address.city,orders.address.zip,orders.email,orders.visit, orders.orderdate )"><i class="fa fa-file-pdf-o"
+              style="font-size:38px;color:#000000"></i>
+              </a></td>
+          </ng-container>
+          <!--Edit/delete-->
+          <ng-container matColumnDef="edit/delete">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Edit </th>
+            <td mat-cell *matCellDef="let order">
+                <br>
+              <button class="btn btn-primary btn-sm  my-2 mx-auto"data-toggle="modal" data-target="#newModel" (click)="query(order.orderid)">  
+                <i class="fa fa-edit" aria-hidden="true"></i>
+            </button>
+            
+            <br>
+    
+            </td>
+            
+          </ng-container>
+  
+  
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+      </tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>
+    <!--model box-->
+    <!--model box-->
+  
+  <table id="content" style="display: none;" >
+    <thead>
+      <tr>
+        <th>Products</th>
+        <th>Price</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prop of (property|async)?.orders; let i = index ">
+        <td>{{(property |async)?.orders[i]}}</td>
+        <td>{{(property |async)?.ordersprice[i]}}</td>
+      </tr>
+      <tr *ngIf="(property |async)?.Photographyaddons">
+        <td>{{(property |async)?.Photographyaddons}}</td>
+        <td>{{(property |async)?.Photographyaddonsprice}}</td>
+      </tr>
+      <tr *ngIf="(property |async)?.Videoaddons" >
+        <td>{{(property |async)?.Videoaddons}}</td>
+        <td>{{(property |async)?.VideoaddonsPrice}}</td>
+      </tr>
+      <tr  >
+        <td>Total</td>
+        <td>${{(property |async)?.orderprice}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+<!--customer Details--->
+
+  <div class="modal" id="Customer">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Customer Details</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body ">
+          <div class="col-3 float-left">
+              <h3 >Name</h3>
+              <h3 >Email-ID</h3>
+               <h3 >Address</h3>
+                <h3 >City</h3>
+                <h3 >zip</h3>
+                <h3 >Phone Number</h3>
+          </div>
+          <div class="col-1 float-left">
+            <h3>:</h3>
+            <h3>:</h3>
+            <h3>:</h3>
+            <h3>:</h3>
+            <h3>:</h3>
+            <h3>:</h3>
+          </div>
+          <div class="col-8 float-right"><h3 >{{(customer |async)?.orderby}}</h3>
+            <h3 >{{(customer |async)?.email}}</h3>
+             <h3 >{{(customer |async)?.address.street}}</h3>
+              <h3 >{{(customer |async)?.address.city}}</h3>
+              <h3 >{{(customer |async)?.address.zip}}</h3>
+              <h3 >{{(customer |async)?.phonenumber}}</h3></div>
+         
+        </div>
+        
+       
+        
+      </div>
+    </div>
+  </div>
+  
+
+
+
+<!--scheduled Date-->
+
+<div class="modal" id="sdate">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Change Scheduled Date</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body mx-auto">
+          
+        <div class="col-6 float-left">
+          
+              <mat-form-field class="my-2">
+                <input matInput [matDatepicker]="picker"  placeholder="Choose a date" [formControl]="date" (dateChange)="datechange($event.target.value)">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker touchUi #picker   ></mat-datepicker>
+              </mat-form-field>
+      
+            </div>
+            <div class="col-6 float-right">
+          
+                <mat-form-field class="my-2"> 
+                    <mat-label>Select an option</mat-label>
+                    <mat-select [(value)]="selected"  (selectionChange)="timechange($event.value)">
+                      <mat-option>None</mat-option>
+                      <mat-option value="10">10 AM</mat-option>
+                      <mat-option value="11">11 AM</mat-option>
+                      <mat-option value="12">12 PM</mat-option>
+                      <mat-option value="1">1 PM</mat-option>
+                      <mat-option value="2">2 PM</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+        
+              </div>
+      
+          </div>
+    </div>
+  </div>
+  
+</div>
+
+
+<!--order view-->
+<div id="ordersdetail" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">Order Details</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body ">
+          
+          
+            
+           <form class="p-2">
+
+              <div class="form-row mt-2">
+                    <div class="col-4" >
+                            <strong>Orders:</strong>
+                                    <ul *ngFor="let ordername of (customer|async)?.orders; let i = index ">
+                                    <li>{{ordername}}<br></li>
+                                    </ul>
+    
+                        </div>
+                        <div class="col-2 float-right">
+                                <strong>OrderPrice:</strong>
+                                        <ul *ngFor="let orderprice of (customer|async)?.ordersprice; let i = index ">
+                                           <li>{{orderprice}}</li>  
+                                        </ul>
+        
+                            </div>
+                       
+                <div class="col-4">
+                        <strong>PhotographyAddons:</strong>
+                        <ul *ngFor="let photoadd of (customer|async)?.Photographyaddons; let i = index ">
+                           <li>{{photoadd}}</li>  
+                        </ul>
+                        <strong>VideoAddons:</strong>
+                        <ul *ngFor="let videoadd of (customer|async)?.Videoaddons; let i = index ">
+                           <li>{{videoadd}}</li>  
+                        </ul>
+                
+                </div>
+
+                <div class="col-2 float-right">
+                        <strong>Price:</strong>
+                        <ul *ngFor="let photoprice of (customer|async)?.Photographyaddonsprice; let i = index ">
+                           <li>{{photoprice}}</li>  
+                        </ul>
+                        <strong>Price:</strong>
+                        <ul *ngFor="let videoprice of (customer|async)?.Photographyaddonsprice; let i = index ">
+                           <li>{{videoprice}}</li> 
+                        </ul>
+                
+
+            </div>
+             </div>   
+
+                  
+              
+                <div class="form-row mt-2">
+                  <div class="col-6">
+                        <p>
+                                <strong>Meeting Type:</strong> {{(customer |async)?.meetingtype}}
+                               
+                                  
+                            </p>
+                      
+                      </div>
+                  <div class="col-6">
+                        <p>
+                                <strong>Code:</strong> {{(customer |async)?.accesscode}}
+                               
+                                  
+                            </p>
+                       </div>
+              </div>
+              <div class="form-row mt-2">
+                  <div class="col-8">
+                        <p>
+                                <strong>Comments:</strong> {{(customer |async)?.comments}}
+                               
+                                  
+                            </p>
+                      
+                  </div>
+
+
+    
+                      </div>
+                      
+                    </form>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      
+                      
+  

@@ -1,0 +1,6 @@
+<app-container>
+    <div [@slideInOut]="triggerAnimation(outlet)" id="mainContainer"  style="min-height:95vh; margin-top:-1px;">
+    <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+<app-footer></app-footer>
+</app-container>

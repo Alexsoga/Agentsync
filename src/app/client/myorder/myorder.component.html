@@ -1,0 +1,62 @@
+
+<div class="row">
+  <div class="bgdark col-12">
+    <div class="col-md-12 text-center text-white p-2">
+          <h3>New Order</h3>
+          <h4>Today is {{today | date: 'longDate'}}</h4>
+          <p>{{message}}</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div class="offset-md-3 col-md-6 col-xs-12 text-center">
+        <button type="button" class="btn btn5 btn-md" href="#placeorder" [routerLink]="['/main/order/placeorder']" routerLinkActive="router-link-active" skipLocationChange >PLACE NEW ORDER</button>
+    </div>
+</div>        
+<div class="row">
+    <div class="col-12">
+       <div class="col-md-3 col-9 mx-auto mt-4">
+          <ul class="nav nav-pills nav-justified" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#Schedule" role="tab">Schedule</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#Calendar" role="tab">Calendar</a>
+              </li>
+          </ul>
+       </div>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active mt-3" id="Schedule" role="tabpanel">
+              <div class="row  mt-3">
+                  <div class="offset-lg-2 col-lg-8 offset-1 col-11">
+                    <ul class="list-group" *ngFor="let datas of datacom |async;let i= index;">
+                      <li class="my-2 pr-5 border border-dark list-group-item">
+                        <div class="row my-2">
+                          <div class="col-3 p-2 pt-3">
+                            <h2 class="py-1">{{datas.visitingdate.toDate() |date:'M/d'}}</h2>
+                          </div>
+                          <div class="col-8 mx-2">
+                            <p class="over">{{datas.address.street}}
+                              <br>{{datas.address.city}}<br>
+                            1 unit | {{datas.visitingdate.toDate() |date:'shortTime'}}</p>
+                    
+                          </div>
+                         
+                        </div>
+                      </li>
+                    </ul>
+                   
+                  </div>
+              </div>
+              </div>
+            
+                
+            <div class="tab-pane fade" id="Calendar" role="tabpanel">hello</div>
+         </div>
+            
+          </div>
+        
+         
+  </div>
+           
+       

@@ -1,0 +1,15 @@
+.size{
+    width: 5vw;
+    margin-left: 4vw;
+    margin-top: -5vw;
+}
+.host{
+    min-height:100vh; 
+  }
+@media screen and (max-width: 420px) and (min-width: 320px){
+    .size{
+        width: 13vw;
+    margin-left: 5vw;
+    margin-top: -13vw;
+    } 
+}

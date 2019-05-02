@@ -1,0 +1,64 @@
+<div class="row mb-4">
+  <div class="bgdark col-12">
+    <div class="col-md-12">
+          <h3 class="text-center text-white">New Order > First Unit</h3>
+          <img src="/assets/image/icons/delivery1.png" class="img-fluid float-right delivery" >
+          <h4 class="text-center sp">Order Review </h4>
+    </div>
+        <div class="row">
+            <div class="col-md-4 col-4 text-left">
+                <button type="button" class="btn btn-link text-white" [routerLink]="['/main/order/comments']" routerLinkActive="router-link-active" skipLocationChange>BACK</button>
+            </div>
+            <div class="col-md-4 col-4 text-center">
+                <h5 class="total">Subtotal:<span class="mx-1 sp">${{orderprice}}</span></h5>
+              </div>
+            <div class="col-md-4 col-4 text-right">
+             <br>
+            </div>
+       </div>
+</div>
+</div>
+        <div class="row text-center mb-3">
+          <div class="offset-md-2 col-md-8 col-xs-12 my-2">
+            <h3>All set? Please review your order below</h3>
+          </div>
+        </div>
+     
+       
+     
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            
+               <ul>
+                    
+                   <li><a [routerLink]="['/main/order/placeorder']" routerLinkActive="router-link-active" skipLocationChange>{{propertytype}}</a></li>
+                   <li><a [routerLink]="['/main/order/squarefeet']" routerLinkActive="router-link-active" skipLocationChange>{{squarefeet}}</a></li>
+                   <li><a [routerLink]="['/main/order/address']" routerLinkActive="router-link-active" skipLocationChange>{{street}}, {{city}}, {{zip}}, <span *ngIf="appartmentunitno !='no unit'">{{appartmentunitno}}</span></a></li>  
+                   <li><a [routerLink]="['/main/order/products']" routerLinkActive="router-link-active" skipLocationChange><b>Products</b><br><ul *ngFor="let hero of ordersuarray;let i=index;">
+                    <li class="ml-4 pl-2">{{hero}}</li>
+                  
+                  </ul></a>
+                  </li>
+                
+                  <li *ngIf="ispaddonarray"><a [routerLink]="['/main/order/addons']" routerLinkActive="router-link-active" skipLocationChange><b>Photography Addons</b>
+                      <ul *ngFor="let hero of paddonsuarray;let i=index;">
+                        <li class="ml-4 pl-2">{{hero}}</li>
+                      
+                      </ul>
+                    </a>
+                  </li>
+                  <li *ngIf="isvaddonarray"><a [routerLink]="['/main/order/addonsv']" routerLinkActive="router-link-active" skipLocationChange><b>Video Addons</b>
+                      <ul *ngFor="let hero of vaddonsuarray;let i=index;">
+                        <li class="ml-4 pl-2">{{hero}}</li>
+                      
+                      </ul>
+                    </a>
+                  </li>
+                   <li><a [routerLink]="['/main/order/access']" routerLinkActive="router-link-active" skipLocationChange>{{accessproperty}}</a></li>
+                   <li *ngIf="accesspropertycode!='No Code'"><a [routerLink]="['/main/order/access']" routerLinkActive="router-link-active" skipLocationChange>{{accesspropertycode}}</a></li>
+                   <li><a [routerLink]="['/main/order/visitingdate']" routerLinkActive="router-link-active" skipLocationChange>{{visitingdatenow | date: 'medium' }}</a></li>
+                   <li *ngIf="comment != ''"><a [routerLink]="['/main/order/comment']" routerLinkActive="router-link-active" skipLocationChange>{{comment}}</a></li>
+               </ul>
+                <button class="btn btn2 btn-block mx-auto mb-5 col-11 offset-1 py-3" (click)="submitorder()" >ADD TO CART</button>
+          </div>
+        </div>

@@ -1,0 +1,38 @@
+
+<div class="row">
+  <div class="bgdark col-12">
+    <div class="col-md-12">
+          <h3 class="text-center text-white">New Order > First Unit</h3>
+          <img src="/assets/image/icons/delivery1.png" class="img-fluid float-right delivery" >
+          <h4 class="text-center sp">Pick a Time </h4>
+    </div>
+    <div class="row">
+          <div class="col-md-4 col-4 text-left">
+              <button type="button" class="btn3 text-white" [routerLink]="['/main/order/visitingdate']" routerLinkActive="router-link-active" skipLocationChange>BACK</button>
+          </div>
+          <div class="col-md-4 col-4 text-center">
+              <h5 class="total">Subtotal:<span class="sp">${{orderprice}}</span></h5>
+            </div>
+          <div class="col-md-4 col-4 text-right">
+              <button type="button" class="btn3 text-white">NEXT</button>
+          </div>
+     </div>
+        </div>
+        </div>
+        <div class="row text-center mb-2">
+          <div class="offset-md-1 col-md-10 col-xs-12 my-4 align">
+            <h3>Great! Now please Pick a time slot that we have available on {{visitingdatenow | date:'MMM d, y'}}</h3>
+          </div>
+        </div>
+    <div class="row">
+      <div class=" my-2 py-md-2  offest-1 col-10 mx-auto align">
+          <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="updatetime(10)">10:00 AM</button>
+         <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block " (click)="updatetime(11)">11:00 AM</button>
+        <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block " (click)="updatetime(12)">12:00 PM</button>
+        <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="updatetime(13)">1:00 PM</button>
+        <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block mb-5" (click)="updatetime(14)">2:00 PM</button>
+      </div>
+      </div>
+    
+   
+     

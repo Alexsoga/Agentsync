@@ -1,0 +1,85 @@
+.material-half-bg {
+    height: 100vh;
+    background-color: #D5D5D5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.material-half-bg .cover {
+    background-color: #F07C49;
+    height: 50vh;
+}
+.login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.login-content .logo {
+    margin-bottom: 40px;
+   
+    color: #fff;
+}
+.login-content .login-box {
+    position: relative;
+    min-width: 350px;
+    min-height: 390px;
+    background-color: #fff;
+  
+}
+.login-content .login-box .login-form, .login-content .login-box .forget-form {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+   
+}
+.login-content .login-box .login-head {
+   
+  
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.login-content .login-box label {
+    color: #666;
+    font-weight: 600;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.login-content .login-box .utility {
+    
+    display: flex;
+
+    
+}
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.btnsin{
+    font-size:0.8rem;
+    color:#fff;
+    background-color: #F07C49;
+}
+a {
+    color: #F07C49;
+    text-decoration: none;
+    background-color: transparent;
+}
+.font{
+    font-size: 0.8rem;
+}
+h3{
+    font-size: 1.3rem;
+    font-weight:550;
+}

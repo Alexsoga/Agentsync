@@ -1,0 +1,28 @@
+
+<div class="row text-center">
+  <div class="col-md-12">
+    <div class="row">
+      
+      <div class="offset-2 col-8">
+       <div class="mb-4" *ngIf="(profile | async)?.url === empty ; else templateName"><img src='https://firebasestorage.googleapis.com/v0/b/agent-sync-sonderworks.appspot.com/o/user%2Fdummy-man-570x570.png?alt=media&token=f9c3832a-9bbe-492f-9823-157fa3c0af3f'
+        class="img-thumbnail img-fluid"></div>
+        <ng-template #templateName>
+          <img [src]="(profile | async)?.url" class="img-thumbnail img-fluid">
+      </ng-template>
+       
+          <p class="my-4 font-weight-bold">{{(profile | async)?.displayName | titlecase }} </p>
+          <hr>
+          <p class="my-4 font-weight-bold">{{(profile | async)?.email}}</p>
+          <hr>
+          <p class="my-4 font-weight-bold"> {{(profile | async)?.phonenumber}}</p>
+          <hr>
+          <p class="my-4 font-weight-bold"> {{(profile | async)?.brokerage}}</p>
+          <hr>
+          <p class="my-4 font-weight-bold">Payment Info: <span>Not set up yet</span></p>
+          <hr>
+          <button type="button" class="btn btn1" (click)="gotoeditprofile()">Edit Profile</button>
+      </div>
+    </div>
+  </div>
+ 
+</div>

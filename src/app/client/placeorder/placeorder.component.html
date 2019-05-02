@@ -1,0 +1,65 @@
+
+<div class="row">
+  <div class="bgdark col-12 p-1">
+    <div class="col-md-12">
+      <h3 class="text-center text-white">Place New Order</h3>
+      <p class="text-center text-white">Orders are itemized by property, per unit.</p>
+      <br>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-4 text-left">
+          <a [routerLink]="['/main/home']" routerLinkActive="router-link-active" skipLocationChange>
+            <img src="/assets/image/icons/arrow1.png" class="img-fluid size">
+          </a>   </div>
+      </div>
+  </div>
+</div>
+<div class="row ">
+  <div class="offset-md-2 col-md-8 col-xs-12">
+    <h3 class="text-center mt-5">What type of property is this?</h3>
+  </div>
+</div>
+<div class="row">
+    <div class="col-12">
+          <div class="row  m-lg-3 m-md-5 my-5">
+            <div class="col-xd col-6 ">
+              <div class="mx-auto col-lg-8 col-12" routerLink="/address">
+                <a (click)="upbuilding('Home')">
+                  <img src="/assets/image/icons/91.png" class="img-fluid" alt="House">
+                </a>
+               
+              </div>
+          
+            </div>
+            <div class="col-xd col-6 ">
+
+                     <div class="mx-auto col-lg-8 col-12" routerLink="/address" skipLocationChange>
+                      <a (click)="upbuilding('Townhome')">
+                      <img src="/assets/image/icons/92.png" class="img-fluid" alt="Townhome">
+                      </a>
+                     </div>
+          
+            </div>
+          </div>
+          <div class="row m-lg-3 m-md-5">
+            <div class=" col-xd col-6 ">   
+              <div class="mx-auto col-lg-8 col-12" routerLink="/units" skipLocationChange>
+                <a (click)="upbuilding('Appartment')">
+                <img src="/assets/image/icons/93.png" class="img-fluid" alt="Appartment">
+                </a>
+               </div>
+          
+            </div>
+            <div class="col-xd col-6">
+        
+              <div class="mx-auto col-lg-8 col-12" routerLink="/address" skipLocationChange>
+                <a (click)="upbuilding('Commercial')">
+                <img src="/assets/image/icons/94.png" class="img-fluid" alt="Commercial">
+                </a>
+              </div>
+          
+            </div>
+          </div> 
+      
+    </div>
+

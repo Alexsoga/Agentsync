@@ -1,0 +1,110 @@
+.headerimg{
+    background-image: url('/assets/image/background/desktop/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+   }
+.rounded-circle {
+    
+    height: 18vh;
+}
+@media screen and (max-width: 850px) and (min-width: 310px){
+    .headerimg{
+        background-image: url('/assets/image/background/mobile/mobilebacklogin.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+       }
+}
+.error
+{
+    color:red;
+}
+input{
+    background-color: #FFFFFF;
+    border:2px solid #434343; 
+    line-height: 6vh;
+    opacity: 0.8;
+    
+
+
+}
+.btn4{
+    background-color:#F1875B;
+    color:#fff;
+    font-size: 1rem;
+    /* border-radius: 25px; */
+}
+.sharp {
+    border-radius:0;
+  } 
+.btn5{
+    color: white;
+    background-color:#A1A1A1;
+   
+  
+   
+}    
+
+   
+    @media screen and(max-width:750){
+        
+        .btn4
+  {
+    color: white;
+    background-color:#F07C49;
+        /* border-radius:25px; */
+    }
+    .btn5{
+        color: white;
+        background-color:#A1A1A1;
+        border-radius:25px;
+        font-size: 2rem;
+    }    
+    
+    }
+    @media screen and (max-width: 420px) and (min-width: 385px){
+        .btn5{
+           
+        font-size:.90rem;
+       
+    
+        }
+        .size{
+            position: absolute;
+    margin-left: 21rem;
+        }
+    
+    
+    }
+
+    @media screen and (max-width: 380px) and (min-width: 360px){
+        .btn5{
+           
+        font-size:.90rem;
+       
+    
+        }
+        .size{
+            position: absolute;
+    margin-left: 19rem;
+        }
+    
+    
+    }
+    @media screen and (max-width: 325px) and (min-width: 310px){
+        .btn5{
+           
+        font-size:.72rem;
+       
+    
+        }
+        .size{
+            position: absolute;
+    margin-left: 15.5rem;
+        }
+    
+    
+    }
+    
+   

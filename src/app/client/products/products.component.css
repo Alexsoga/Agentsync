@@ -1,0 +1,64 @@
+h4{
+    color:#f1875b;
+   
+}
+
+.delivery{
+    margin-top: -4.5vw;
+}
+@media screen and (max-width: 580px) and (min-width: 450px){
+    .delivery{
+	    margin-top: -11vw;
+    margin-right: -1vw;
+}
+h3{
+	font-size:1.4rem;
+}
+h4{
+	font-size:1.4rem;
+}
+}
+@media screen and (max-width: 780px) and (min-width: 600px){
+    .delivery{
+        margin-top: -9vw;
+    }
+}
+
+@media screen and (max-width: 445px) and (min-width: 375px){
+    .delivery{
+	    margin-top: -14vw;
+    margin-right: -1vw;
+}
+h3{
+	font-size:1.4rem;
+}
+h4{
+	font-size:1.4rem;
+}
+}
+@media screen and (max-width: 325px) and (min-width: 300px){
+    .delivery{
+	    margin-top: -18vw;
+    margin-right: -1vw;
+}
+h3{
+	font-size:1.05rem;
+}
+h4{
+	font-size:1.05rem;
+}
+}
+
+@media screen and (max-width: 375px) and (min-width: 340px){
+    h3{
+        font-size:1.2rem;
+    
+    }
+    .delivery{
+        margin-top: -16vw;
+        margin-right: -1vw;    
+    }
+    h4{
+        font-size:1.2rem;
+    }
+}

@@ -1,0 +1,39 @@
+mat-sidenav {
+  width: 200px;
+  
+}
+.centerimg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.example{
+  padding-left:0 !important;
+  padding-right: 0!important;
+}
+li:hover{
+  background-color: #F07C49;
+
+}
+.mat-badge-medium .mat-badge-content {
+  height: 28px;
+  width: 28px;
+  line-height: 30px;
+  font-size: 1rem;
+ }
+ .mat-badge-warn .mat-badge-content {
+   background-color: #F07C49;
+ }
+ .mat-badge-medium.mat-badge-after .mat-badge-content {
+  right: -34px;
+}
+.mat-badge-medium.mat-badge-above .mat-badge-content {
+  top: -6px;
+}
+@media only screen and (max-width: 780px) and (min-width: 300px) {
+ 
+  mat-sidenav {
+    width:-webkit-fill-available;    
+  }
+ 
+}

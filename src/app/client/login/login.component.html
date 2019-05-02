@@ -1,0 +1,88 @@
+<div class="row">
+        <div class="offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 headerimg">
+                <div class="offset-lg-2 col-lg-8 col-xs-12 col-sm-12 text-center mx-auto pt-5">
+                        <img src="/assets/image/icons/SWLogo_clarge.png" class="rounded-circle img-fluid my-2">
+                        <img src="/assets/image/icons/SWLogo_cweb.png" class="img-fluid mt-2"  alt="Agent-sync">
+                        <!-- <img src="/assets/image/icons/sonderworks.png" class="img-fluid "  alt="Agent-sync"> -->
+                </div> 
+         
+        <form class="offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 my-4" #loginform="ngForm" (ngSubmit)="login(email.value, password.value)">
+                <div class="form-group row">
+                        <div class="col-12">
+                                <div class="row">
+                                        <p class="error text-center">{{ error.message }}</p>
+                                        <div class="offset-1 col-10">
+                                                <input type="email" required class="form-control-lg col-12 text-center sharp" placeholder="Email" name="email" required
+                                                        pattern="[^@]*@[^@]*" [(ngModel)]="cli.email" #email="ngModel" autocomplete="email" autofocus>
+                                        </div>
+                                        <div class="col-1 size">
+                                                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="mt-2">
+                                                
+                                                        <div *ngIf="email.errors.required">
+                                                        <img src="../../../assets/image/icons/wrong.png" class="img img-responsive" style="width:2rem">
+                                                        
+                                                        </div>
+                                                        <div *ngIf="email.errors?.pattern">
+                                                        <img src="../../../assets/image/icons/wrong.png" class="img img-responsive" style="width:2rem">
+                                                        </div>
+                                                </div>
+                                                <div *ngIf="email.valid && (email.dirty || email.touched)" class="mt-2">
+                                                        <img src="../../../assets/image/icons/tick.png" class="img img-responsive" style="width:2rem">
+                                                </div>        
+
+                                        </div>
+                                </div><br>
+                                <div class="form-group row">        
+                                        <div class="offset-1 col-10">
+                                                <input type="password" required class="form-control-lg col-12 text-center sharp" placeholder="Password" name="password"
+                                                         [(ngModel)]="cli.phone" #password="ngModel" autocomplete="current-password">
+                                        </div>
+                                        <div class="col-1 size">
+                                                <div *ngIf="password.invalid && password.dirty " class="mt-2">
+                                                
+                                                        <div *ngIf="password.errors.required">
+                                                                <img src="../../../assets/image/icons/wrong.png" class="img img-responsive" style="width:2rem">
+                                                
+                                                        </div>
+                                                </div>
+                                                <div *ngIf="password.valid && (password.dirty || password.touched)" class="mt-2">
+                                                
+                                               
+                                                                <img src="../../../assets/image/icons/tick.png" class="img img-responsive" style="width:2rem">
+                                                
+                                                     
+                                                </div>
+                                        </div>
+                                       
+                                       
+                                       
+                                </div>
+                        </div>
+                </div>
+                <div class="form-group row">
+                        <div class="offset-1 col-10 my-2">
+
+                                <button type="submit" class="btn btn4 sharp btn-block mx-auto py-2" 
+                                        >SIGN IN</button>
+
+                        </div>
+
+                        <div class="offset-1 col-5 text-center my-4">
+                                <button type="button" class="btn btn5 btn-block py-2 sharp"  [routerLink]="['/register']" routerLinkActive="router-link-active" skipLocationChange>REGISTER
+                                        ME</button>
+
+
+                        </div>
+                        <div class="col-5 text-center my-4">
+
+
+                                <button type="button" class="btn btn5 btn-block py-2 sharp" [routerLink]="['/forget']" routerLinkActive="router-link-active" skipLocationChange>FORGOT INFO</button>
+                        </div>
+
+
+                </div>
+
+                        <!-- <small><a [routerLink]="['/adlogin']"  class="text-black" routerLinkActive="router-link-active">Admin Login</a> </small> -->
+        </form>
+</div>
+</div>

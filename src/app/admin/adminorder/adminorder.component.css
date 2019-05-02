@@ -1,0 +1,21 @@
+.col-md-9{
+    margin-bottom: 0rem !important; 
+ }
+ .sidenav{
+    background-color: #656565 !important;
+    
+    
+    }
+    .nav-link.active {
+      background-color:#f07c49;
+    
+    }
+    .btn-sm {
+      padding: 0.25rem 1.5rem;
+     
+      border-radius: .2rem;
+  }
+  .btn-primary {
+      background-color: #4285f4 !important;
+      color: #fff !important;
+  }

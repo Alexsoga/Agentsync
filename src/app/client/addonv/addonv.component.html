@@ -1,0 +1,33 @@
+
+<div class="row mb-5">
+  <div class="bg-dark col-12">
+    <div class="col-md-12">
+          <h3 class="text-center text-white">New Order > First Unit</h3>
+          <h4 class="text-center">Products </h4>
+    </div>
+        <div class="row">
+          <div class="col-md-4 col-4 text-left">
+              <h5 class="text-white">BACK</h5>
+          </div>
+          <div class="col-md-4 col-4 text-center">
+            <h5>Subtotal:</h5>
+          </div>
+          <div class="col-md-4 col-4 text-right">
+            <h5 class="text-white">NEXT</h5>
+          </div>
+        </div>
+  </div>
+</div>
+<div class="row text-center">
+    <div class="offset-2 col-8">
+      <h3>Are there any add-ons you need to apply to this product?</h3>
+      <p>*Please Select all that apply.<p>
+    </div>
+  </div>
+  <div class="row">
+      <div class="offset-2 col-8 my-2">
+          <button  class="btn btn1 btn-lg btn-block " (click)="pushvcs($event, 'Community Shots')">Community Shots(+$50)</button>
+          <button class="btn btn1 btn-lg btn-block" (click)="pushvts($event, 'Twlight Shots')">Twlight Shots(+$50)</button>
+            <button type="button" class="btn btn1 btn-lg btn-block" (click)="pushvrf($event, 'Rush Fee')">Rush Fee(+$75)</button>
+      </div>
+  </div>

@@ -1,0 +1,96 @@
+
+  :host {
+    left: auto;
+    top: 10px;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    min-width: 250px;
+    z-index: 9999;
+   
+  }
+  .swipe
+  {
+    font-size: 1.5rem;
+    color: black;
+  }
+   
+  .nav-pills , .nav-pills .show>.nav-link {
+   
+    color: #000;
+    font-size: .75rem;
+}
+.nav-link.active{
+  background-color:#f07c49;
+  color: #fff;
+  font-size: .75rem;
+}
+.photop{
+  color:#f07c49;
+}
+h6{
+  color:#f07c49;
+}
+h5{
+  color:#f07c49;
+}
+
+a{
+  color: #000;
+}
+ span {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+   }
+   .menu
+  {
+    width:100vw;
+  }
+ #view
+ {
+ top: 3rem;
+ margin-top: -3rem;
+ 
+  
+ }
+ .priceres{
+   min-height:150vh; 
+ }
+ 
+ .list-group-item
+ {
+  background: none;
+  border:none;
+ border-bottom: 1px solid grey;
+  padding:0.50rem;
+ }
+ 
+   
+#headerback{
+  background-image: url('/assets/image/background/mobile/pricem.png');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  min-height: 160vh;   
+}
+ 
+ @media screen and (max-width: 750px) {
+
+
+.nav-pills , .nav-pills .show>.nav-link {
+   
+  color: #000;
+  font-size: 1rem;
+}
+.nav-link.active {
+background-color:#f07c49;
+color: #fff;
+font-size: 1rem;
+}
+
+a
+{
+  font-size:.75rem;
+ 
+}
+}

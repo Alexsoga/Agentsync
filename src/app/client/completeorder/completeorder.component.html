@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class="row mb-4">
+    <div class="bgdark col-12">
+      <div class="col-md-12">
+            <h3 class="text-center text-white">New Order > First Unit</h3>
+            <img src="/assets/image/icons/delivery1.png" class="img-fluid float-right delivery" >
+            <h4 class="text-center sp">Order Complete</h4>
+      </div>
+          <div class="row">
+              <div class="col-md-4 col-4 text-left">
+                  <button type="button" class="btn btn-link text-white" [routerLink]="['/main/order/pay']" routerLinkActive="router-link-active" skipLocationChange>BACK</button>
+              </div>
+              <!-- <div class="col-md-4 col-4 text-center">
+                  <h5 class="total">Subtotal:<span class="mx-1 sp">${{order.orderprice}}</span></h5>
+                </div> -->
+              <div class="col-md-4 col-4 text-right">
+               <br>
+              </div>
+         </div>
+  </div>
+  </div>
+        <div class="row text-center">
+          <div class="offset-md-3 col-md-6 col-xs-12 my-2">
+            <h2>You have Placed Your Order!</h2>
+          </div>
+        </div>
+        <div class="row text-center mb-3">
+          <div class="offset-md-3 col-md-6 col-xs-12 my-2">
+            <p>Please check your email for confirmation and details.</p>
+            <p *ngIf="orderlist | async as order"><span class="text">Your Order ({{order.length}})</span> have been updated.</p>
+            <p>NOTE&nbsp;:&nbsp;&nbsp;We will contact you to confirm your order and scheduling.</p>
+            <p>Thank You!</p>
+          </div>
+        </div>
+        <div class="row">
+      
+       <div class="offset-md-3 col-md-6 offset-1 col-10 mt-5 my-3" *ngIf="send | async as order"  >
+            
+                <button type="button" class="btn btn2 btn-md btn-block" [routerLink]="['/main/home']" routerLinkActive="router-link-active" skipLocationChange    (click)="Sendpush(order.tokenid)" >BACK HOME</button>
+                <button type="button" class="btn btn3 btn-md btn-block" [routerLink]="['/main/order/placeorder']" routerLinkActive="router-link-active" skipLocationChange (click)="Sendpush(order.tokenid)">PLACE NEW ORDER</button>
+           
+                      </div>
+            </div>
+            

@@ -1,0 +1,44 @@
+
+<div class="row">
+  <div class="bgdark col-12">
+      <div class="col-12">
+          <h3 class="text-center text-white">New Order > First Unit</h3>
+          <img src="/assets/image/icons/delivery1.png" class="img-fluid float-right delivery" >
+          <h4 class="text-center">Property Size</h4>
+      </div>
+         <div class="row">
+            <div class="col-md-6 col-6 text-left">
+              <button type="button" class="btn btn-link text-white" [routerLink]="['/main/order/address']" routerLinkActive="router-link-active" skipLocationChange>BACK</button>
+            </div>
+            <div class="col-md-6 col-6 text-right">
+              <button type="button" class="btn btn-link text-white float-right" (click)="checksqft()">NEXT</button>
+            </div>
+         </div>
+        </div>
+         
+</div>
+<div class="row "> 
+          <div class="offset-md-3 col-md-6 offset-sm-3 col-sm-6 col-xs-12">
+            <h3 class="text-center mt-2">How many square feet?{{sqft}}</h3>
+            <p class="text-danger">{{message}}</p>
+          </div>
+</div>
+<div class="row">
+        <div class="offset-1 col-10 mx-auto mt-4"> 
+          
+            <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="updatesqft($event, '0-750')" [ngClass]="{btn4:is0750sel}">0-750 SF</button>
+            <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="updatesqft($event, '751-1500')" [ngClass]="{btn4:is751sel}">751-1500 SF</button>
+            <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="updatesqft($event, '1501-2250')" [ngClass]="{btn4:is1501sel}">1501-2250 SF</button>
+            <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="updatesqft($event, '2251-3000')" [ngClass]="{btn4:is2251sel}">2251-3000 SF</button>
+            <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="updatesqft($event, '3001-3750')" [ngClass]="{btn4:is3001sel}">3001-3750 SF</button>
+            <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="updatesqft($event, '3751-4500')" [ngClass]="{btn4:is3751sel}">3751-4500 SF</button>
+            <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block" (click)="updatesqft($event, '4501-5250')" [ngClass]="{btn4:is4501sel}">4501-5250 SF </button>
+            <button type="button" class="btn btn1 btn-md py-sm-4 py-md-3 btn-block mb-5" (click)="updatesqft($event, '5251+')" [ngClass]="{btn4:is5251sel}">5251+ SF</button>
+        </div>
+      
+     
+</div>
+     
+        
+     
+    

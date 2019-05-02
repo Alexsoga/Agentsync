@@ -1,0 +1,25 @@
+<div class="row ">
+    <div class="offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 background">
+<div class="row ">
+        
+    <div class="col-12">
+        <a class="float-left size" [routerLink]="['/login']" routerLinkActive="router-link-active" skipLocationChange>
+            <img src="/assets/image/icons/arrow.png" class="img-fluid float-left">
+        </a>
+        <h3 class="text-center mt-5">Forgot your login info?</h3>
+        <p class="text-center">An email will be sent to the registered address.</p>
+    </div>
+    <form class="col-12 mt-5 top text-center" >
+        <div class="row mt-5">
+            <div class="offset-md-3 col-md-6 col-xs-12">
+                <input type="text" name="recoveremail" #recoveremail placeholder="Email Address"  class="form-control p-4 mb-5 input-lg numinput text-center">
+            </div>
+            <div class="offset-md-3 col-md-6 col-xs-12 mt-5">
+                <button type="submit" class="btn btn1 btn-block p-3 mt-5" (click)="forget(recoveremail.value)">RECOVER LOGIN</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+    

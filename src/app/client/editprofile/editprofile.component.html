@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+<div class="row text-center">
+  <div class="col-md-6 col-6 mx-auto" >
+    <div class="mb-4" *ngIf="(profile | async)?.url === empty ; else templateName"><img src='https://firebasestorage.googleapis.com/v0/b/agent-sync-sonderworks.appspot.com/o/user%2Fdummy-man-570x570.png?alt=media&token=f9c3832a-9bbe-492f-9823-157fa3c0af3f'
+      class="img-thumbnail img-fluid"></div>
+      <ng-template #templateName>
+        <img [src]="(profile | async)?.url" class=" img-fluid">
+    </ng-template>
+       
+<div class="image-upload">
+    <label for="file-input">
+       <i class="fa fa-edit custom-edit mx-auto"></i>
+    </label>
+  
+    <input id="file-input" type="file" single=true (change)="upload($event)"  name="file-input" accept=".png,.jpg">
+    
+  
+</div>
+
+    </div>
+    <div class="col-md-12"> 
+      
+          <div class="d-flex flex-row">
+                  <p  class=" p-2 mr-auto my-2 ">Name</p>
+          
+                          <p class="font-weight-bold p-2 my-2 ">{{(profile | async)?.displayName | titlecase }}</p>
+                  </div>
+                <hr>
+                <div class="d-flex flex-row">
+                  <p  class=" p-2 mr-auto my-2">Email</p>
+                
+                          <p class="font-weight-bold p-2 my-2 " >{{(profile | async)?.email}} </p>
+                  </div>
+                
+                <hr>
+                <div class="d-flex flex-row">
+                  <p class=" p-2 mr-auto my-2">Brokerage</p>
+               
+                          <p class="font-weight-bold p-2 my-2 ">{{(profile | async)?.brokerage}}</p>
+                 </div>
+                 
+                <hr>
+                
+                <div class="d-flex flex-row">
+                    <p  class=" p-2 mr-auto my-2 ">Phone number</p>
+               
+                            <p class="font-weight-bold p-2 my-2 " >{{(profile | async)?.phonenumber}} </p>
+                    </div>
+                  
+                <hr>
+                <div class="d-flex flex-row">
+                  <p class="p-2 mr-auto">Payment Info:<span class="mx-1">Not set up yet</span> </p>
+                  <div class="p-2">
+                    <button type="button" class="btn btn1">Set Up</button>
+                  </div>
+                </div>
+                      
+                      
+                             
+                     
+                  
+                </div>
+                
+    
+  </div>
+
+

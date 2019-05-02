@@ -1,0 +1,92 @@
+
+h4{
+    color:#f1875b;
+    
+}
+.delivery{
+    margin-top: -4.5vw;
+}
+@media screen and (max-width: 580px) and (min-width: 450px){
+    .delivery{
+	    margin-top: -11vw;
+    margin-right: 1vw;
+}
+h3{
+	font-size:1.4rem;
+}
+h4{
+	font-size:1.4rem;
+}
+}
+@media screen and (max-width: 780px) and (min-width: 600px){
+    .delivery{
+        margin-top: -9vw;
+    }
+}
+
+@media screen and (max-width: 445px) and (min-width: 375px){
+    .delivery{
+	    margin-top: -16vw;
+    margin-right: -1vw;
+}
+h3{
+	font-size:1.4rem;
+}
+h4{
+	font-size:1.4rem;
+}
+}
+@media screen and (max-width: 325px) and (min-width: 300px){
+    .delivery{
+	    margin-top: -18vw;
+    margin-right: -1vw;
+}
+h3{
+	font-size:1.05rem;
+}
+h4{
+	font-size:1.05rem;
+}
+}
+
+@media screen and (max-width: 375px) and (min-width: 340px){
+    h3{
+        font-size:1.2rem;
+    
+    }
+    .delivery{
+        margin-top: -16vw;
+        margin-right: -1vw;    
+    }
+    h4{
+        font-size:1.2rem;
+    }
+}
+.orderquery{
+    position:absolute;
+    top: -12px;
+    margin-left: 275px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .orderquery{
+      position:absolute;
+      top: -19px;
+      margin-left: -24px;
+    }
+   
+    
+  }
+
+h5{
+    color:#d5d5d5;
+}
+.btn1{
+    background-color: #f1875b;
+    color: #fff;
+    border-radius: 25px;
+}
+
+.orderhead{
+    color: #8ACA80;
+}

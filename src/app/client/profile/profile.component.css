@@ -1,0 +1,16 @@
+img{
+    width: 8rem;
+    margin-top: 5rem;
+}
+.btn1
+	{
+		color: white;
+		background-color:#F07C49;
+        /* border-radius:20px;  */
+         width: 14rem;
+         margin-top: 4rem;
+		
+    }
+    span{
+        color:#FF0000;
+    }   

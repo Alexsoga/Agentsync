@@ -1,0 +1,121 @@
+<!-- 
+<div class="row">
+  <div class="offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-12">
+    <div class="row headerimg">
+      <div class="offset-2 col-8 offset-md-4 col-md-3 mx-auto">
+        <img src="/assets/image/icons/logo1.jpg" class="rounded-circle img-fluid mt-5">
+        <img src="/assets/image/icons/agentsynclogo.png" class="img-fluid " alt="Agent-sync">
+      </div>
+
+      <mat-horizontal-stepper linear #stepper class="size w-100">
+        <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+          <form [formGroup]="firstFormGroup"  (ngSubmit)="agent(agentForm.value)" #agentForm="ngForm">
+            <ng-template matStepLabel>Step 1</ng-template>
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <mat-form-field class="w-100">
+                  <input matInput placeholder="Name" formControlName="fullName"  required>
+                </mat-form-field>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <mat-radio-group formControlName="gender" >
+                  <mat-radio-button name="gender" value="male" >Male &nbsp;</mat-radio-button>
+                  <mat-radio-button name="gender" value="female" >Female</mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <mat-form-field>
+                  <input matInput [matDatepicker]="picker" placeholder="Date Of Birth" formControlName="dob" required>
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+                </mat-form-field>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <mat-form-field>
+                  <mat-select placeholder="Skills" formControlName="skills" multiple required>
+                    <mat-option *ngFor="let skills of skillsList" [value]="skills">{{skills}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <mat-form-field class="w-100">
+                  <input matInput placeholder="Email" name="email" formControlName="pemail" email="true" >
+                  <mat-hint>Errors appear instantly!</mat-hint>
+                  <mat-error *ngIf="pemail.errors?.email">
+                    Please enter a valid email address
+                  </mat-error>
+                  
+                </mat-form-field>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <mat-form-field class="w-25">
+                  <input matInput placeholder="+1" formControlName="phcountry">
+                </mat-form-field>
+                <mat-form-field class="w-25">
+                  <input matInput placeholder="999" formControlName="pharea">
+                </mat-form-field>
+                <mat-form-field class="w-25">
+                  <input matInput placeholder="555" formControlName="phprefix">
+                </mat-form-field>
+                <mat-form-field class="w-25">
+                  <input matInput placeholder="9999" formControlName="phline">
+                </mat-form-field>
+                <br>
+                <button mat-flat-button matStepperNext>Next</button>
+              </div>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Step 2</ng-template>
+            <div class="row">
+              <div class="col-xs-12 col-sm-12">
+                <mat-form-field class="w-100">
+                  <input matInput placeholder="Street" formControlName="secondCtrl" required>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-4">
+                <mat-form-field class="w-100">
+                  <input matInput placeholder=" City" formControlName="secondCtrl" required>
+                </mat-form-field>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <mat-form-field class="w-100">
+                  <input matInput placeholder="State" formControlName="secondCtrl" required>
+                  </mat-form-field>
+                  </div>
+                  <div class="col-xs-12 col-sm-4">
+                    <mat-form-field class="w-100">
+                      <input matInput placeholder="ZIP code" formControlName="secondCtrl" required>
+                    </mat-form-field>
+                  </div>
+                  </div>
+                  
+                  <div class="row">
+                    <button mat-flat-button matStepperNext class="mx-auto">Next</button>
+                  </div>
+                  </form>
+                  </mat-step>
+                  
+                  <mat-step>
+                    <ng-template matStepLabel>Step 3</ng-template>
+                    <div class="row ml-1">
+                      <mat-checkbox><a href="#">I accept the terms and conditions</a></mat-checkbox>
+                    </div>
+                  
+                    <div class="row" class="text-center mt-5">
+                     <button type="button"[disabled]="!agentForm.valid" class="btn-success">Submit</button>
+                    </div>
+                  
+                  </mat-step>
+                  </mat-horizontal-stepper>
+                  </div>
+                  </div>
+                  </div> -->

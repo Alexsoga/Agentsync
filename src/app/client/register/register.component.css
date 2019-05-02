@@ -1,0 +1,73 @@
+.bgrd{
+    background-image: url('/assets/image/background/desktop/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+input.ng-invalid.ng-dirty
+{
+    border: 1px solid red;
+}
+.sharp {
+    border-radius:0;
+  }  
+ h4
+{ 
+  color: #434343;   
+ 
+}
+.btd
+{
+    color: #F07C49;
+}
+ .btninput
+  {
+    color: white;
+    background-color:#F07C49;
+       
+       
+    }
+.fa{
+        
+        font-size: 1.5rem;
+      
+    }
+/* .numinput{
+    border: 2px solid #434343;
+    border-radius:0;
+} */
+@media screen and (max-width: 780px) {
+    .bgrd{
+        background-image: url('/assets/image/background/mobile/regm.png');
+    }
+    
+     
+    }
+
+    .size{
+        position: absolute;
+        width: 4vw;
+        padding-top: 1.3vw;
+        margin-left: 3vw;
+    }
+
+    @media screen and (max-width: 420px) and (min-width: 320px){
+        .size{
+            position: absolute;
+            width: 10.5vw;
+    padding-top: 5.3vw;
+    margin-left: 4vw;
+        }
+        h2{
+            margin-top: 20vw;
+            margin-left: 4vw;
+        }
+    }
+
+    @media screen and (max-width: 420px) and (min-width: 320px)
+{
+h2 {
+    margin-top: 0 !important; 
+    
+}
+}

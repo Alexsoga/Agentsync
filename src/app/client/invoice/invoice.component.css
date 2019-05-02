@@ -1,0 +1,22 @@
+.btn3{
+    background-color: transparent;
+    border: none;
+}
+.btn{
+    background-color:#F1875B;
+    color:#fff;
+    border-radius: 20px;
+}
+.bg-dark{
+    background-color: #636363 !important;
+}
+img.tr {
+    width: 19vw;
+    height: 31vw;
+}
+@media screen and (min-width:768){
+    img.tr {
+        width: 24vw;
+        height: 43vw;
+    }
+}

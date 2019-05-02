@@ -1,0 +1,91 @@
+<div class="row">
+  <div class="offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 bgrd">
+<div class="row ">
+  <a class="float-left size"  [routerLink]="['/login']" routerLinkActive="router-link-active" skipLocationChange>
+      <img src="/assets/image/icons/arrow.png" class="img-fluid float-left">
+  </a>
+  <div class="col-12 mt-5 mb-3">
+
+    <h3 class="text-center">Please let us know</h3>
+    <h3 class="text-center"> who to register.</h3>
+  </div>
+  <form class=" col-12 text-center mt-3 mb-3" (ngSubmit)="register(registerForm.value)" #registerForm="ngForm">
+    <div class="row ">
+      <div class="offset-md-3 col-md-6 col-xs-12 ">
+      <p class="error text-center">{{ error.message }}</p>
+        <input type="text" name="name" placeholder="Full Name" class="form-control p-4 numinput text-center " required
+          minlength="4" [(ngModel)]="cli.name" #name="ngModel" autocomplete="name">
+      </div>
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger offset-md-3 col-md-6 col-xs-12 my-2">
+
+        <div *ngIf="name.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="name.errors.minlength">
+          Name must be at least 4 characters long.
+        </div>
+
+
+      </div>
+    </div>
+    <div class="row my-4">
+      <div class="offset-md-3 col-md-6 col-xs-12 my-2">
+        <input type="text" name="brokerage" placeholder="Brokerage" class="form-control p-4 numinput text-center"
+          required minlength="3" [(ngModel)]="cli.brokerage" #brokerage="ngModel">
+      </div>
+      <div *ngIf="brokerage.invalid && (brokerage.dirty || brokerage.touched)" class="alert alert-danger offset-md-3 col-md-6 col-xs-12 my-2">
+
+        <div *ngIf="brokerage.errors.required">
+          Brokerage is required.
+        </div>
+        <div *ngIf="brokerage.errors.minlength">
+          Brokerage must be at least 3 characters long.
+        </div>
+
+
+      </div>
+    </div>
+    <div class="row my-4">
+      <div class="offset-md-3 col-md-6 col-xs-12 my-2">
+        <input type="email" name="email" placeholder="Email Address" class="form-control p-4 numinput text-center "
+          required pattern="[^@]*@[^@]*" [(ngModel)]="cli.email" #email="ngModel" autocomplete="email">
+      </div>
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger offset-md-3 col-md-6 col-xs-12 my-2">
+
+        <div *ngIf="email.errors.required">
+          Email required.
+        </div>
+        <div *ngIf="email.errors?.pattern">
+          Please enter proper email
+        </div>
+      </div>
+    </div>
+    <div class="row my-4">
+      <div class="offset-md-3 col-md-6 col-xs-12 my-2">
+        <input type="tel" name="phone" placeholder="Phonenumber" class=" form-control p-4 numinput text-center"
+          required pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" maxlength="10" [(ngModel)]="cli.phone"
+          #phone="ngModel" autocomplete="tel">
+      </div>
+      <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="alert alert-danger offset-md-3 col-md-6 col-xs-12 my-2">
+
+        <div *ngIf="phone.errors.required">
+          Phone number is required.
+        </div>
+        <div *ngIf="phone.errors?.pattern">
+          Please enter proper phone number
+        </div>
+      </div>
+    </div>
+    <div class="row my-4">
+      <div class="offset-md-3 col-md-6 col-xs-12 ">
+        <button type="submit" [disabled]="!registerForm.valid" class="btn btninput btn-block mx-auto p-3 sharp">REGISTER ME
+        </button>
+      </div>
+    </div>
+    <p class="my-4 text-white">Already have an account?
+      <a routerLink="/login" class="text-white">Sign In</a>
+    </p>
+  </form>
+</div>
+</div>
+</div>

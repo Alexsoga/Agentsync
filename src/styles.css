@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Lato');
+html, body{
+    height:100%;
+}
+body {  font-family: 'Lato', sans-serif !important ;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    font-size: inherit;
+}
+.shade{
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
+body {  font-family: 'Lato';}
+.btn-selected{
+    color:#000;
+    background-color: #D5D5D5 !important;
+    font-size:1.5rem;
+}
+h5{
+    color: #d5d5d5;
+}
+h4{
+    color: #f1875b;
+}
+.bgdark{
+    color:#fff;
+    background-color: #636363;
+}
+.bgdark > h5{
+    color:#D5D5D5;
+}
+.btn1{
+    background-color:#F1875B;
+    color:#fff;
+    font-size: 1rem;
+    border-radius: 0px !important;
+}
+.btn1:hover{
+    background-color: #D5D5D5;
+    color:#000;
+    border-radius: 0px !important;
+
+}
+.btns
+{
+    background-color: #D5D5D5;
+    color:#000;
+    font-size: 1rem; 
+}
+.btns:hover
+{
+     background-color:#F1875B;
+    color:#fff;
+
+}
+.sp
+{
+ color:#f1875b;
+}
+.numinput{
+    border: 2px solid #434343 !important;
+    border-radius: 0 !important;
+  
+}
+.btn2{
+    border-radius: 25px !important;
+    background-color: #f1875b;
+    color:#fff;
+}
+.btn3{
+    border-radius: 25px !important;
+    background-color:#77c16c;
+    color:#fff;
+}
+.nav-link{
+    font-size: .95rem;
+    font-weight: 400;
+    padding:.25rem !important
+}
+.modal-backdrop {
+   
+    display: none !important;
+}
+.mat-drawer-container {
+    background-color: #fff!important;
+}

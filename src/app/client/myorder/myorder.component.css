@@ -1,0 +1,26 @@
+ .btn5{
+    background-color:#F1875B;
+    color:#fff;
+    margin-top: -1rem;
+    border-radius: 20px;
+} 
+.btn6{
+    border-radius: 20px;
+}
+.bgcolor{
+    background-color: #77C16C;
+}
+/* .vl {
+        border-left: 2px solid black;
+        height: 10px;
+    } */
+.nav-pills,.nav-link{
+background-color: #ACACAC;
+color: #EBEBEB;
+border-radius: 20px;
+}
+.nav-link.active{
+    background-color: #EBEBEB;
+    color: #000;
+   
+} 

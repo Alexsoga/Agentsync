@@ -1,0 +1,86 @@
+<div class="row mb-4">
+  <div class=" offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 example">
+      <mat-sidenav-container class="example-container" >
+        <mat-sidenav #sidenav [mode]="over" class="bgdark" >
+          <div class="col-12 example ">
+          <img src="../../../assets/image/icons/exit.png" (click)="this.sidenav.close();" class="img-fluid mx-2 my-3" >
+          <div class="col-10 mx-auto" *ngIf="(profile | async)?.url === empty ; else templateName"><img src='https://firebasestorage.googleapis.com/v0/b/agent-sync-sonderworks.appspot.com/o/user%2Fdummy-man-570x570.png?alt=media&token=f9c3832a-9bbe-492f-9823-157fa3c0af3f'
+            class=" img-fluid"></div>
+            <ng-template  #templateName>
+              <div class="col-6 mx-auto my-2">
+              <img [src]="(profile | async)?.url" class="centerimg img-fluid">
+            </div>
+            </ng-template>
+          
+            <h5 class="text-white text-center my-4">{{(profile | async)?.displayName | titlecase }}</h5>
+          
+            <nav>
+              <ul class="navbar-nav mx-auto my-5 nav-fill w-100">
+                <li class="nav-item my-3">
+                  <a class="nav-link text-white" [routerLink]="['./home']" routerLinkActive="active" (click)="this.sidenav.close();">Main</a>
+                </li>
+            
+                <li class="nav-item my-3">
+                  <a class="nav-link text-white" [routerLink]="['./order/placeorder']" routerLinkActive="active" (click)="this.sidenav.close();">Place Order</a>
+                </li>
+                <li class="nav-item my-3" *ngIf="avisosTest | async as aviso">
+                  <a class="nav-link text-white" [routerLink]="['./myorder']" routerLinkActive="active" (click)="this.sidenav.close();" ><span matBadge={{aviso.length}} matBadgeColor="warn" matBadgeOverlap="false">My Orders</span></a>
+                  
+                </li>
+                <li class="nav-item my-3">
+                  <a class="nav-link text-white" [routerLink]="['/main/myaccount/main']" routerLinkActive="active" (click)="this.sidenav.close();">My Account</a>
+                </li>
+                <li class="nav-item my-3"> 
+                  <a class="nav-link text-white" [routerLink]="['./delivery']" routerLinkActive="active" (click)="this.sidenav.close();">Deliveries</a>
+                </li>
+                <li class="nav-item my-3"> 
+                  <a class="nav-link text-white" [routerLink]="['./profile']" routerLinkActive="active" (click)="this.sidenav.close();">Profile </a>
+                </li>
+                <li class="nav-item my-3">
+                
+                  <a class="nav-link text-white" (click)="signout()" routerLinkActive="active"(click)="this.sidenav.close();">Logout</a>
+                </li>
+            
+              </ul>
+            </nav>
+          </div>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div class="example-sidenav-content">
+              <div class="row">
+                <div class="col-12 bgdark">
+                  <button type="button" style="background-color:#636363; width: 3vw;" mat-button  (click)="sidenav.toggle()">
+                    <img src="../../../assets/image/icons/Untitled-1.png" class="size">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <ng-content ></ng-content>
+        
+            <!-- <router-outlet></router-outlet>
+
+   <!-- -->
+
+   <!-- <div [@slideInOut]="triggerAnimation(outlet)" id="mainContainer">
+    <router-outlet #outlet="outlet" ></router-outlet>
+  </div>
+  
+
+             
+              <app-footer></app-footer> -->
+        </mat-sidenav-content> 
+      </mat-sidenav-container>
+      <!-- <mat-drawer-container class="row example-container" autosize>
+        <mat-drawer #drawer class="example-sidenav  bgdark" mode="side">
+         
+         
+        </mat-drawer>
+      
+      
+          <!-- <app-access></app-access> -->
+        <!-- </div>
+      
+      </mat-drawer-container> -->
+      
+  </div>
+</div>
